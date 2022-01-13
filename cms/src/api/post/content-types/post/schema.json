@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "posts"
+    },
+    "for_prompt": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::prompt.prompt",
+      "inversedBy": "posts"
+    },
+    "total_votes": {
+      "type": "integer"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

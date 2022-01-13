@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prompts",
+  "info": {
+    "singularName": "prompt",
+    "pluralName": "prompts",
+    "displayName": "Prompt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "total_votes": {
+      "type": "integer",
+      "default": 0
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "prompts"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "for_prompt"
+    }
+  }
+}
