@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
     import type { Load } from '@sveltejs/kit';
     export const load: Load = async ({ params, fetch }) => {
-        const res = await fetch('http://localhost:1337/api/prompts/'+params.promptID);
+        const res = await fetch(process.env.CMS_API_URL+'prompts/'+params.promptID);
         const data = await res.json();
         return { props: { prompt: data.data } };
     };
