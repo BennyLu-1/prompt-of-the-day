@@ -1,66 +1,44 @@
-<style>
-@media (min-width: 1024px) {
-  .top-navbar {
-    display: inline-flex !important;
-  }
-}
-
-</style>
-
-<nav class="flex items-center bg-gray-800 p-3 flex-wrap">
-      <a href="#" class="p-2 mr-4 inline-flex items-center">
-        <span class="text-xl text-white font-bold uppercase tracking-wide">Prompt of the Day</span
-        >
-      </a>
-      <button
-        class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
-        data-target="#navigation"
-      >
-        <i class="material-icons">menu</i>
-      </button>
-      <div
-        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
-        id="navigation"
-      >
-        <div
-          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto"
-        >
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
-            <span>Home</span>
-          </a>
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
-            <span>About</span>
-          </a>
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
-            <span>Services</span>
-          </a>
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
-            <span>Gallery</span>
-          </a>
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
-            <span>Products</span>
-          </a>
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
-            <span>Contact Us</span>
-          </a>
-        </div>
+<div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
+  <div class="px-2 mx-2 navbar-start">
+    <a href="/">
+      <span class="text-lg font-bold">
+            Prompt of the Day
+    </span>
+    </a>
+  </div> 
+  <div class="hidden px-2 mx-2 navbar-center lg:flex">
+    <div class="flex items-stretch">
+      <a class="btn btn-ghost btn-sm rounded-btn">
+              Home
+            </a> 
+      <a class="btn btn-ghost btn-sm rounded-btn">
+              Portfolio
+            </a> 
+      <a class="btn btn-ghost btn-sm rounded-btn">
+              About
+            </a> 
+      <a class="btn btn-ghost btn-sm rounded-btn">
+              Contact
+            </a>
+    </div>
+  </div> 
+  <div class="navbar-end">
+    <button class="btn btn-square btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">     
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>                     
+      </svg>
+    </button> 
+    <button class="btn btn-square btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">             
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>             
+      </svg>
+    </button>
+  </div>
+  <div class="flex-none">
+    <div class="avatar">
+      <div class="rounded-full w-10 h-10 m-1">
+        <img src="https://i.pravatar.cc/500?img=32">
       </div>
-    </nav>
+    </div>
+  </div>
+</div>

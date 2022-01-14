@@ -22,8 +22,6 @@
     <title>Prompt of the Day</title>
 </svelte:head>
 
-<div class="container mx-auto mt-4">
-    {#each prompts as prompt}
-        <PromptCard prompt={prompt}/>
-    {/each}
-</div>
+{#each prompts as prompt}
+    <PromptCard prompt={prompt}/>
+{/each}
