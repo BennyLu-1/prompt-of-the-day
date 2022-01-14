@@ -3,9 +3,10 @@
     import PromptCard from '../components/promptCard.svelte';
 
     export const load: Load = async ({ fetch }) => {
-        const res = await fetch('/prompts');
+        const res = await fetch(import.meta.env.VITE_CMS_API_URL+'prompts'+'?populate=author');
         const data = await res.json();
         
+        console.log(data.data);
         return { props: { prompts: data.data } };
     };
 </script>

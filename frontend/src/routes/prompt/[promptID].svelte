@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
     import type { Load } from '@sveltejs/kit';
     export const load: Load = async ({ params, fetch }) => {
-        const res = await fetch(process.env.CMS_API_URL+'prompts/'+params.promptID);
+        const res = await fetch(import.meta.env.VITE_CMS_API_URL+'prompts/'+params.promptID);
         const data = await res.json();
         return { props: { prompt: data.data } };
     };
@@ -10,7 +10,6 @@
 <script lang="ts">
     //export let prompts: Prompt[];
     export let prompt: any;
-    console.log(prompt);
 </script>
 
 <div class="py-12">
