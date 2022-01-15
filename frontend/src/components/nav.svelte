@@ -1,4 +1,4 @@
-<div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
+<div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box mx-auto">
   <div class="px-2 mx-2 navbar-start">
     <a href="/">
       <span class="text-lg font-bold">
@@ -8,7 +8,7 @@
   </div> 
   <div class="hidden px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
-      <a class="btn btn-ghost btn-sm rounded-btn">
+      <a href="/" class="btn btn-ghost btn-sm rounded-btn">
               Home
             </a> 
       <a class="btn btn-ghost btn-sm rounded-btn">

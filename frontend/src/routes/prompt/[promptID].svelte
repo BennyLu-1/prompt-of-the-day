@@ -10,6 +10,11 @@
 <script lang="ts">
     //export let prompts: Prompt[];
     export let prompt: any;
+    let buttonText = "Submit";
+    const submitPost = (e) => {
+        buttonText = "Posting...";
+        e.currentTarget.classList.add("loading");
+    }
 </script>
 
 <div class="py-12">
@@ -17,14 +22,12 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
                 <h2 class="card-title">{prompt.attributes.content}</h2>
-                <form method="POST" action="action.php">
-                    <div class="form-control">
-                        <textarea name="post" class="textarea h-24" placeholder="Use the prompt to write something here..."></textarea>
-                    </div>
-                    <div class="card-actions">
-                        <button id="submit" class="btn btn-primary" required>Submit</button>
-                    </div>
-                </form>
+                <div class="form-control">
+                    <textarea name="post" class="textarea h-24" placeholder="Use the prompt to write something here..."></textarea>
+                </div>
+                <div class="card-actions">
+                    <button role="button" id="submit" class="btn btn-primary" on:click|once|preventDefault={submitPost} required>{buttonText}</button>
+                </div>
             </div>
         </div>
     </div>
