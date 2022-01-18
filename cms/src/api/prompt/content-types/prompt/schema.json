@@ -29,7 +29,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::post.post",
-      "mappedBy": "for_prompt"
+      "mappedBy": "postID"
     }
   }
 }
